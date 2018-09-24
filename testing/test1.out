@@ -1,0 +1,37 @@
+DB61B System.  Version 2.0.
+> Loaded students.db
+> Loaded enrolled.db
+> Loaded schedule.db
+> > ...Search results:
+  102 Valerie
+  106 Yangfan
+> > ......Search results:
+  Jason Knowles B
+  Shana Brown B+
+  Valerie Chan B+
+  Yangfan Chan B
+> > > .........> > Search results:
+  Jason Knowles
+  Shana Brown
+  Thomas Armstrong
+  Valerie Chan
+  Yangfan Chan
+> > Loaded blank.db
+> > > Contents of blank:
+  this  is a test
+  this is a test
+> Error: unknown table: glorp
+> Loaded generic1.db
+> > > > > > > Contents of folks:
+  Ann 30 Detroit
+  Brian 10 Ann Arbor
+  George 60 Syracuse
+  Martin 80 Buffalo
+> Stored folks.db
+> > > Contents of folks:
+> > Loaded folks.db
+> Contents of folks:
+  Ann 30 Detroit
+  Brian 10 Ann Arbor
+  George 60 Syracuse
+  Martin 80 Buffalo

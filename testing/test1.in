@@ -1,0 +1,40 @@
+load students;
+load enrolled;
+load schedule;
+/* What are the names and SIDS of all students whose last name
+     is 'Chan'? */
+select SID, Firstname from students
+     where Lastname = 'Chan';
+/* Who took the course with CCN 21001, and what were their grades? */
+select Firstname, Lastname, Grade
+         from students, enrolled where CCN = '21001' 
+	 and SID = SID;
+/* Who has taken the course named 61A from EECS? */
+/* First, create a table that contains SIDs and course names */
+create table enrolled2 as
+  select SID
+     from enrolled, schedule 
+     where Dept = 'EECS' and Num = '61A';
+/* Now print the names of the students in this list */
+select Firstname, Lastname from students, enrolled2;
+/* Insert values into blank.db */
+load blank;
+insert into blank values ('this is', 'a', 'test');
+insert into blank values ('this  is', 'a', 'test');
+print blank;
+print glorp;
+load generic1;
+create table folks (Name, Age, Birthplace);
+insert into folks values ('Martin', '80', 'Buffalo');
+insert into folks values ('George', '60', 'Syracuse');
+insert into folks values ('Ann', '30', 'Detroit');
+insert into folks values ('Brian', '10', 'Ann Arbor');
+print folks;
+store folks;
+
+create table folks (None);
+print folks;
+
+load folks;
+print folks;
+quit;
